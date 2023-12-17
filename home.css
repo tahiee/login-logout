@@ -9,6 +9,33 @@ a {
     color: black;
 }
 
+.child-section {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    margin-left: 12px;
+}
+
+input {
+    margin-left: 10px;
+    padding: 6px 30px 6px 12px;
+    border-radius: 10px;
+}
+
+.input-section {
+    display: flex;
+    /* align-items: center; */
+    justify-content: left;
+    padding: 6px 0px 6px 0px;
+}
+
+.buttoon-section {
+    display: flex;
+    /* align-items: center; */
+    justify-content: left;
+    margin-left: 160px;
+}
+
 .navbar {
     position: -webkit-sticky;
     position: sticky;
@@ -45,13 +72,19 @@ h2 {
     justify-content: center;
     align-items: center;
     float: left;
-    position: fixed;
+    /* position: fixed; */
     left: 22px;
-    margin-top: 22px;
+    /* margin-top: 22px; */
     font-size: 45px;
 }
 
-.btn {
+.todobutton{
+    height: 30px;
+    width: 120px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.btn0 {
     border: none;
     background-color: red;
     cursor: pointer;
@@ -61,22 +94,39 @@ h2 {
     font-weight: 200;
 }
 
-.btn:hover {
+.btn0:hover {
     background-color: gray;
     color: yellow;
     font-weight: 400;
 }
 
-.hero-section {
-    margin-top: -15px;
-    display: flex;
+.child-container {
+    display: list-item;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 
-.hero-section>img {
-    height: 100%;
-    width: 100%;
-    background-position: center;
-    background-size: cover;
+.child-container>h3 {
+    font-size: 35px;
+    /* color:red ; */
+}
+
+h3>span {
+    color: darkslateblue;
+}
+
+.child-container>button {
+    height: 35px;
+    width: 60px;
+    margin-top: 12px;
+    border-radius: 40px;
+    border: 1px solid red;
+    color: blueviolet;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.child-container>button:hover {
+    background-color: yellow;
 }

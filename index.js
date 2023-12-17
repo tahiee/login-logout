@@ -1,5 +1,6 @@
 import { createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
-import { auth } from './config.js';
+import { auth , db } from './config.js';
+import { collection, addDoc , getDocs  } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
 
 const form = document.querySelector('form');
 const email = document.querySelector('#email');
@@ -11,10 +12,21 @@ form.addEventListener('submit', (e) => {
     console.log(password.value)
 
     createUserWithEmailAndPassword(auth, email.value, password.value)
-        .then((userCredential) => {
+        .then(async(userCredential) => {
             const user = userCredential.user;
             console.log(user)
             alert('Resgister Successfully Please Login Yourself')
+            try {
+                const docRef = await addDoc(collection(db, "users"), {
+                    email: email.value,
+                    password: password.value,
+                    uid: user.uid
+                });
+                console.log("Document written with ID: ", docRef.id);
+                window.location = 'login.html'
+            } catch (e) {
+                console.error("Error adding document: ", e);
+            }
         })
         .catch((error) => {
             const errorCode = error.code;

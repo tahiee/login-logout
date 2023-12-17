@@ -16,16 +16,33 @@
             <ul><a href="home.html">Home</a></ul>
             <ul>Dashbord</ul>
             <ul>about</ul>
-            <button class="btn">Logout</button>
+            <button class="btn0">Logout</button>
         </nav>
     </div>
     <div class="header">
         <h1>Welcome to Home</h1><br>
-        <h2>Blog Section</h2>
-    </div><br>
-    <div class="hero-section">
-        <img src="./what-is-a-blog-1.webp" alt="" class="img1">
-
+    </div>
+    <div class="parent-section">
+        <div class="child-section">
+            <h2>ToDo App</h2><br><br><br><br>
+        </div>
+        <form id="form" onsubmit="return false">
+            <div class="input-section">
+                <input type="text" placeholder="Title" id="title">
+                <input type="text" placeholder="Descripition" id="desc">
+            </div>
+            <div class="buttoon-section">
+                <button type="submit" class="todobutton">Add ToDo</button>
+            </div>
+        </form>
+    </div>
+    <div class="container">
+        <!-- <div class="child-container"> -->
+        <!-- <h3 style="color: brown;">Title:<span> ${item.data.title} </span></h3>
+            <h3 style="color: brown;">Description:<span> ${item.data.description}</span></h3>
+            <button class="editBtn" data-id="${item.id}">Edit</button>
+            <button class="deleteBtn" data-id="${item.id}">Delete</button> -->
+        <!-- </div> -->
     </div>
 
     <script type="module" src="home.js"></script>
