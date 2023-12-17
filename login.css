@@ -9,6 +9,10 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
 }
+::placeholder {
+    color: black;
+    opacity: 1; /* Firefox */
+}
 .login-section{
     margin-top: 90px;
     
